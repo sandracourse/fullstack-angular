@@ -10,7 +10,7 @@
         $scope.msg = "";
         $scope.checkLunch = function() {
             var dishArray = splitString($scope.dishes, ',');
-            dishArray = dishArray.filter(Boolean);
+            dishArray = dishArray.filter(entry => entry.trim() != '');
 
             var dishLength = dishArray.length;
             if (dishLength == 0) {
